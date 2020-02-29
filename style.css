@@ -1,3 +1,28 @@
 h1{
-    padding: 100px;
+    padding: 50px;
+}
+.submit-area{
+    display: block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    padding: 40px;
+    margin: 20px;
+
+}
+#transaction-area{
+    display: none;
+}
+.deposit{
+    background-color: slateblue;
+}
+.withdraw{
+    background-color: lightsalmon;
+}
+.balance{
+    background-color: orange;
+}
+.samerow{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
