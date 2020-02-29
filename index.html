@@ -91,16 +91,9 @@
         const withdrawBtn = document.getElementById("addWithdraw");
         withdrawBtn.addEventListener("click", function(){
             const withdrawAmountNumber = getInputNumber("withdrawAmount");
-            //console.log(withdrawAmountNumber);
-            const currentWithdraw = document.getElementById("currentWithdraw").innerText;
-            const currentWithdrawNumber = parseFloat(currentWithdraw);
-            const dTotal = currentWithdrawNumber + withdrawAmountNumber;
-            document.getElementById("currentWithdraw").innerText = dTotal;
-
-            const ddd = document.getElementById("currentBalance").innerText;
-            const zzz = parseFloat(ddd);
-            const ttt = zzz - withdrawAmountNumber;
-            document.getElementById("currentBalance").innerText = ttt;
+            updateSpanText("currentWithdraw", withdrawAmountNumber);
+            updateSpanText("currentBalance", withdrawAmountNumber*(-1));
+            
             document.getElementById("withdrawAmount").value = "";
 
             
@@ -117,6 +110,7 @@
             const num = parseFloat(amount);
             return num;
         }
+        
         
     </script>
 </body>
